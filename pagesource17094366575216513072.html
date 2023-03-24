@@ -1,0 +1,605 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html lang="en"&gt;<br/>
+ &lt;head&gt; <br/>
+  &lt;title&gt;Practice Page&lt;/title&gt; <br/>
+  &lt;meta charset="utf-8"&gt; <br/>
+  &lt;link rel="icon" href="images/rs_logo.png" type="image/x-icon"&gt; <br/>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; <br/>
+  &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"&gt; <br/>
+  &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"&gt;&lt;/script&gt; <br/>
+  &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"&gt;&lt;/script&gt; <br/>
+  &lt;script&gt;<br/>
+    function openWindow() {<br/>
+        myWin = window.open("http://www.qaclickacademy.com/", "myWin", "width=1200, height=600, top=100, left=100, scrollbars=yes, resizable=yes");<br/>
+    }<br/>
+    function myFunction() {<br/>
+        myWin = window.open("http://www.qaclickacademy.com/", "myWin", "width=1200, height=600, top=100, left=100, scrollbars=yes, resizable=yes");<br/>
+    }<br/>
+    function displayAlert() {<br/>
+        var value = document.getElementById("name").value;<br/>
+        alert("Hello " + value + ", share this practice page and share your knowledge");<br/>
+        document.getElementById("name").value = "";<br/>
+    }<br/>
+    function displayConfirm() {<br/>
+        var value = document.getElementById("name").value;<br/>
+        confirm("Hello " + value + ", Are you sure you want to confirm?")<br/>
+        document.getElementById("name").value = "";<br/>
+    }<br/>
+    function hideElement() {<br/>
+        var x = document.getElementById("displayed-text");<br/>
+        //style.visibility = "hidden";<br/>
+        x.style.display = "none";<br/>
+    }<br/>
+    function showElement() {<br/>
+        var x = document.getElementById("displayed-text");<br/>
+        //style.visibility = "visible";<br/>
+        x.style.display = "block";<br/>
+    }<br/>
+&lt;/script&gt; <br/>
+  &lt;style type="text/css"&gt;<br/>
+<br/>
+.footer_top_agile_w3ls {<br/>
+        padding: 3em 0;<br/>
+    }<br/>
+    .footer_top_agile_w3ls {<br/>
+        padding: 2em 0;<br/>
+    }<br/>
+.footer_top_agile_w3ls {<br/>
+    background: #eee;<br/>
+    padding: 4em 0;<br/>
+}<br/>
+    h1 {<br/>
+        margin-bottom: 30px;<br/>
+    }<br/>
+    select {<br/>
+        font-size: 14px;<br/>
+        width: 120px;<br/>
+        height: 30px;<br/>
+        border: 2px solid #39949a;<br/>
+        -moz-border-radius: 3px;<br/>
+        -webkit-border-radius: 3px;<br/>
+        border-radius: 3px;<br/>
+    }<br/>
+    .dropbtn {<br/>
+            background-color: #39949a; /* #4CAF50; */<br/>
+            color: white;<br/>
+            padding: 16px;<br/>
+            font-size: 16px;<br/>
+            border: none;<br/>
+            cursor: pointer;<br/>
+        -moz-border-radius: 3px;<br/>
+        -webkit-border-radius: 3px;<br/>
+        border-radius: 3px;<br/>
+    }<br/>
+    .btn-style {<br/>
+            background-color: #39949a;<br/>
+            color: white;<br/>
+            padding: 10px;<br/>
+            font-size: 14px;<br/>
+            border: none;<br/>
+            cursor: pointer;<br/>
+        -moz-border-radius: 3px;<br/>
+        -webkit-border-radius: 3px;<br/>
+        border-radius: 3px;<br/>
+    }<br/>
+    /* The container &lt;div&gt; - needed to position the mouse-hover content */<br/>
+    .mouse-hover {<br/>
+            /* position: relative;<br/>
+            display: inline-block; */<br/>
+    }<br/>
+    /* mouse-hover Content (Hidden by Default) */<br/>
+    .mouse-hover-content {<br/>
+            display: none;<br/>
+        position: absolute;<br/>
+            background-color: #f9f9f9;<br/>
+            min-width: 160px;<br/>
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);<br/>
+    }<br/>
+    /* Links inside the mouse-hover */<br/>
+    .mouse-hover-content a {<br/>
+            color: black;<br/>
+            padding: 12px 16px;<br/>
+            text-decoration: none;<br/>
+            display: block;<br/>
+    }<br/>
+    /* Change color of mouse-hover links on hover */<br/>
+    .mouse-hover-content a:hover {<br/>
+        background-color: #f1f1f1<br/>
+    }<br/>
+    /* Show the mouse-hover menu on hover */<br/>
+    .mouse-hover:hover .mouse-hover-content {<br/>
+            display: block;<br/>
+    }<br/>
+    /* Change the background color of the mouse-hover button when the mouse-hover content is shown */<br/>
+    .mouse-hover:hover .dropbtn {<br/>
+        background-color: #3e8e41;<br/>
+    }<br/>
+    fieldset {<br/>
+        font-size: 14px;<br/>
+        /* border: 2px solid #000; */<br/>
+        /*padding: 1em;*/<br/>
+        padding: .2em;<br/>
+        border-radius: 0.5em;<br/>
+    }<br/>
+    legend {<br/>
+        font-size: 14px;<br/>
+        width: auto;<br/>
+        color: #fff;<br/>
+        background: #2b3636;<br/>
+        padding: 0.25em 1em;<br/>
+        border-radius: 1em;<br/>
+    }<br/>
+    /* One radio button per line */<br/>
+    label {<br/>
+            display: block;<br/>
+            cursor: pointer;<br/>
+            line-height: 2;<br/>
+            font-size: 1em;<br/>
+    }<br/>
+    body {<br/>
+            font-family:"Trebuchet MS", Arial, sans-serif;<br/>
+        }<br/>
+        #product{<br/>
+            font-family:"Trebuchet MS", Arial, sans-serif;<br/>
+            width:400px;<br/>
+            border-collapse:separate;<br/>
+        /* border-spacing:10px; */<br/>
+        /* margin-left: 200px; */<br/>
+        }<br/>
+    #product td, #product th{<br/>
+        border:1px solid #39949a; /* #4CAF50; */<br/>
+        padding:3px 7px 2px 7px;<br/>
+        font-size:1em;<br/>
+    }<br/>
+        #product th{<br/>
+        font-size:1.1em;<br/>
+        padding-top:5px;<br/>
+        padding-bottom:4px;<br/>
+        background-color: #39949a;<br/>
+        color: #fff;<br/>
+        color: antiquewhite<br/>
+    }<br/>
+    .left-align {<br/>
+        float: left;<br/>
+        }<br/>
+    .right-align{<br/>
+            font-family:"Trebuchet MS", Arial, sans-serif;<br/>
+            /*width:400px; */<br/>
+            /*margin-left: 100px;*/<br/>
+            float: right;<br/>
+        }<br/>
+        .cen-align{<br/>
+            font-family:"Trebuchet MS", Arial, sans-serif;<br/>
+            /*width:400px; */<br/>
+            margin-left: 150px;<br/>
+        margin-right: 100px;<br/>
+            float: left;<br/>
+        }<br/>
+    .cen-left-align{<br/>
+            font-family:"Trebuchet MS", Arial, sans-serif;<br/>
+            /*width:400px; */<br/>
+            margin-left: 70px;<br/>
+        margin-right: 30px;<br/>
+            float: left;<br/>
+        }<br/>
+    .cen-right-align{<br/>
+            font-family:"Trebuchet MS", Arial, sans-serif;<br/>
+            /*width:400px; */<br/>
+            margin-left: 60px;<br/>
+        margin-right: 30px;<br/>
+            float: left;<br/>
+    }<br/>
+        .block{<br/>
+        width: 900px;<br/>
+            position: relative;<br/>
+            display: inline-block;<br/>
+            margin: 0px 0px 2px 20px;<br/>
+            margin-top: 2px;<br/>
+            margin-bottom: 20px;<br/>
+            margin-left: 20px;<br/>
+            text-align: justify;<br/>
+            border-bottom: .5px solid;<br/>
+            border-bottom-color: #2b3636;<br/>
+        }<br/>
+        .table-display{<br/>
+            width:400px;<br/>
+            padding: .5em;<br/>
+            margin: 0px 20px 20px 10px;<br/>
+        }<br/>
+        .default-row-spacer{<br/>
+            margin-bottom: 10px;<br/>
+        }<br/>
+        .large-row-spacer{<br/>
+            margin-bottom: 20px;<br/>
+        }<br/>
+    inputs:-webkit-input-placeholder {<br/>
+        color: #b5b5b5;<br/>
+    }<br/>
+    inputs-moz-placeholder {<br/>
+        color: #b5b5b5;<br/>
+    }<br/>
+    .inputs {<br/>
+        background: #f5f5f5;<br/>
+        font-size: 14px;<br/>
+        -moz-border-radius: 3px;<br/>
+        -webkit-border-radius: 3px;<br/>
+        border-radius: 3px;<br/>
+        border: none;<br/>
+        padding: 13px 10px;<br/>
+        /* width: 270px; */<br/>
+        margin-bottom: 20px;<br/>
+        box-shadow: inset 0 2px 3px rgba( 0, 0, 0, 0.1 );<br/>
+        clear: both;<br/>
+    }<br/>
+    .inputs:focus {<br/>
+        background: #fff;<br/>
+        box-shadow: 0 0 0 3px #39949a, inset 0 2px 3px rgba( 0, 0, 0, 0.2 ), 0px 5px 5px rgba( 0, 0, 0, 0.15 );<br/>
+        outline: none;<br/>
+    }<br/>
+	legend.switch-tab {<br/>
+    margin-bottom: 15px;<br/>
+}<br/>
+a#opentab {<br/>
+    color: white!important;<br/>
+}<br/>
+    /*Following style is for Computer, Laptops*/<br/>
+    @media screen and (min-width: 900px) {<br/>
+        .logoClass{<br/>
+            margin: -50px 250px 0px -650px;<br/>
+			width:85px;<br/>
+        }<br/>
+        .header_style {<br/>
+            height: 5px;<br/>
+        }<br/>
+    }<br/>
+    /*Following style is for Mobile, Tabs*/<br/>
+    @media only screen and (max-width: 900px) {<br/>
+        .logoClass{<br/>
+            margin: -40px 0px 0px -850px;<br/>
+			width:85px;<br/>
+        }<br/>
+            .header_style {<br/>
+            height: 5px;<br/>
+            width:1000px;<br/>
+        }<br/>
+        .footer_style {<br/>
+            width:1000px;<br/>
+        }<br/>
+<br/>
+<br/>
+        .alert_example{<br/>
+            margin-top: -80px;<br/>
+        }<br/>
+      }  <br/>
+&lt;/style&gt; &lt;!-- footer Style --&gt; <br/>
+  &lt;style type="text/css"&gt;<br/>
+    .gffoot ul {<br/>
+            float: left;<br/>
+            height: 100%;<br/>
+            padding-right: 10px;<br/>
+            margin: 0;<br/>
+            list-style: none;<br/>
+            min-width: 177px;<br/>
+        }<br/>
+        .gf-t {<br/>
+            width: 100%;<br/>
+            margin-top: 20px;<br/>
+            border-spacing: 0;<br/>
+            border-collapse: collapse;<br/>
+        }<br/>
+        table {<br/>
+            display: table;<br/>
+            border-collapse: separate;<br/>
+            border-spacing: 2px;<br/>
+            border-color: grey;<br/>
+        }<br/>
+        .gh-w {<br/>
+            line-height: 1;<br/>
+            font-size: 14px;<br/>
+            color: #333;<br/>
+            font-family: "Helvetica neue",Helvetica,Arial,Sans-serif;<br/>
+        }<br/>
+        .gh-w {<br/>
+            text-align: left;<br/>
+        }<br/>
+        #gf-BIG.gffoot li {<br/>
+            margin-bottom: 12px;<br/>
+            display: list-item;<br/>
+            font-size: 12px;<br/>
+        }<br/>
+        a{<br/>
+            color: #767676 !important;<br/>
+        }     <br/>
+        a:hover{<br/>
+            color: #767676 !important;<br/>
+        }<br/>
+		.totalAmount {<br/>
+			margin-left: 200px;<br/>
+			font-weight: bold;<br/>
+		}<br/>
+		a.blinkingText {<br/>
+			float: right;<br/>
+			margin-top: -37px;<br/>
+			font-weight:bold;<br/>
+			padding:0px 10px;<br/>
+			font-size:20px;<br/>
+			background:#27b35f;<br/>
+			color: #fff !important;<br/>
+			animation: blink 1s linear infinite;<br/>
+			text-decoration: underline;<br/>
+			cursor: pointer;<br/>
+		}<br/>
+		@keyframes blink{<br/>
+			0%{opacity: 0;}<br/>
+			50%{opacity: 0.8;}<br/>
+			100%{opacity: 1;}<br/>
+		}<br/>
+    &lt;/style&gt; &lt;!-- footer Style Ends --&gt; &lt;!-- Autocomplete --&gt; <br/>
+  &lt;link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"&gt; <br/>
+  &lt;script src="https://code.jquery.com/jquery-1.12.4.js"&gt;&lt;/script&gt; <br/>
+  &lt;script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"&gt;&lt;/script&gt; <br/>
+  &lt;script&gt;<br/>
+  $( function() {<br/>
+    var availableTags = ["Afghanistan", "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Anguilla", "Antarctica", "Antigua and Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegowina", "Botswana", "Bouvet Island", "Brazil", "British Indian Ocean Territory", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central African Republic", "Chad", "Chile", "China", "Christmas Island", "Cocos (Keeling) Islands", "Colombia", "Comoros", "Congo", "Congo, the Democratic Republic of the", "Cook Islands", "Costa Rica", "Cote d'Ivoire", "Croatia (Hrvatska)", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands (Malvinas)", "Faroe Islands", "Fiji", "Finland", "France", "France Metropolitan", "French Guiana", "French Polynesia", "French Southern Territories", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Heard and Mc Donald Islands", "Holy See (Vatican City State)", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran (Islamic Republic of)", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, Democratic People's Republic of", "Korea, Republic of", "Kuwait", "Kyrgyzstan", "Lao, People's Democratic Republic", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libyan Arab Jamahiriya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia, The Former Yugoslav Republic of", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Martinique", "Mauritania", "Mauritius", "Mayotte", "Mexico", "Micronesia, Federated States of", "Moldova, Republic of", "Monaco", "Mongolia", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue", "Norfolk Island", "Northern Mariana Islands", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Pitcairn", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russian Federation", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Seychelles", "Sierra Leone", "Singapore", "Slovakia (Slovak Republic)", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Georgia and the South Sandwich Islands", "Spain", "Sri Lanka", "St. Helena", "St. Pierre and Miquelon", "Sudan", "Suriname", "Svalbard and Jan Mayen Islands", "Swaziland", "Sweden", "Switzerland", "Syrian Arab Republic", "Taiwan, Province of China", "Tajikistan", "Tanzania, United Republic of", "Thailand", "Togo", "Tokelau", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks and Caicos Islands", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom (UK)", "United States (USA)", "United States Minor Outlying Islands", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Virgin Islands (British)", "Virgin Islands (U.S.)", "Wallis and Futuna Islands", "Western Sahara", "Yemen", "Yugoslavia", "Zambia", "Zimbabwe"];<br/>
+    $( "#autocomplete" ).autocomplete({<br/>
+        maxResults: 10,<br/>
+        minLength:2,<br/>
+        source: availableTags,<br/>
+    });<br/>
+  } );<br/>
+  &lt;/script&gt; &lt;!-- Autocomplete Ends --&gt; <br/>
+ &lt;/head&gt; <br/>
+ &lt;body&gt; <br/>
+  &lt;header class="jumbotron text-center header_style" style=""&gt; &lt;a href="https://www.rahulshettyacademy.com/"&gt;&lt;img src="images/rs_logo.png" class="logoClass"&gt;&lt;/a&gt; &lt;a href="https://rahulshettyacademy.com/documents-request" class="blinkingText"&gt;Free Access to InterviewQues/ResumeAssistance/Material&lt;/a&gt; <br/>
+   &lt;div style="text-align: right;margin-top: -30px;"&gt; &lt;a href="https://www.rahulshettyacademy.com/"&gt;&lt;button class="btn btn-primary"&gt;Home&lt;/button&gt;&lt;/a&gt; &lt;button class="btn btn-primary"&gt;Practice&lt;/button&gt; &lt;button class="btn btn-primary"&gt;Login&lt;/button&gt; &lt;button class="btn btn-primary"&gt;Signup&lt;/button&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/header&gt; <br/>
+  &lt;h1&gt;Practice Page&lt;/h1&gt; <br/>
+  &lt;div class="block large-row-spacer"&gt; <br/>
+   &lt;div class="left-align" id="radio-btn-example"&gt; <br/>
+    &lt;fieldset&gt; &lt;legend&gt;Radio Button Example&lt;/legend&gt; &lt;label for="radio1"&gt; &lt;input value="radio1" name="radioButton" class="radioButton" type="radio"&gt; Radio1 &lt;/label&gt; &lt;label for="radio2"&gt; &lt;input value="radio2" name="radioButton" class="radioButton" type="radio"&gt; Radio2 &lt;/label&gt; &lt;label for="radio3"&gt; &lt;input value="radio3" name="radioButton" class="radioButton" type="radio"&gt; Radio3 &lt;/label&gt; <br/>
+    &lt;/fieldset&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;div class="cen-left-align" id="select-class-example"&gt; <br/>
+    &lt;fieldset&gt; &lt;legend&gt;Suggession Class Example&lt;/legend&gt; <br/>
+     &lt;input type="text" id="autocomplete" class="inputs ui-autocomplete-input" placeholder="Type to Select Countries" autocomplete="off"&gt; <br/>
+    &lt;/fieldset&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;div class="cen-right-align"&gt; <br/>
+    &lt;fieldset&gt; &lt;legend&gt;Dropdown Example&lt;/legend&gt; &lt;select id="dropdown-class-example" name="dropdown-class-example"&gt; &lt;option value=""&gt;Select&lt;/option&gt; &lt;option value="option1"&gt;Option1&lt;/option&gt; &lt;option value="option2"&gt;Option2&lt;/option&gt; &lt;option value="option3"&gt;Option3&lt;/option&gt; &lt;/select&gt; <br/>
+    &lt;/fieldset&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;div class="right-align" id="checkbox-example"&gt; <br/>
+    &lt;fieldset&gt; &lt;legend&gt;Checkbox Example&lt;/legend&gt; &lt;label for="bmw"&gt; &lt;input id="checkBoxOption1" value="option1" name="checkBoxOption1" type="checkbox"&gt; Option1 &lt;/label&gt; &lt;label for="benz"&gt; &lt;input id="checkBoxOption2" value="option2" name="checkBoxOption2" type="checkbox"&gt; Option2 &lt;/label&gt; &lt;label for="honda"&gt; &lt;input id="checkBoxOption3" value="option3" name="checkBoxOption3" type="checkbox"&gt; Option3 &lt;/label&gt; <br/>
+    &lt;/fieldset&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/div&gt; <br/>
+  &lt;div class="block large-row-spacer"&gt; <br/>
+   &lt;div class="left-align"&gt; <br/>
+    &lt;fieldset&gt; &lt;legend&gt;Switch Window Example&lt;/legend&gt; &lt;button id="openwindow" class="btn-style class1" onclick="openWindow()"&gt;Open Window&lt;/button&gt; <br/>
+    &lt;/fieldset&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;div class="cen-align"&gt; <br/>
+    &lt;fieldset&gt; &lt;legend class="switch-tab"&gt;Switch Tab Example&lt;/legend&gt; &lt;a id="opentab" class="btn-style class1 class2" href="https://www.rahulshettyacademy.com/" target="_blank"&gt;Open Tab&lt;/a&gt; <br/>
+    &lt;/fieldset&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;div class=""&gt; <br/>
+    &lt;fieldset class="pull-right"&gt; &lt;legend&gt;Switch To Alert Example&lt;/legend&gt; <br/>
+     &lt;input id="name" name="enter-name" class="inputs" placeholder="Enter Your Name" type="text"&gt;<br/>
+     &lt;br&gt; <br/>
+     &lt;input id="alertbtn" class="btn-style" value="Alert" onclick="displayAlert()" type="submit"&gt; <br/>
+     &lt;input id="confirmbtn" class="btn-style" value="Confirm" onclick="displayConfirm()" type="submit"&gt; <br/>
+    &lt;/fieldset&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;br&gt; <br/>
+  &lt;/div&gt; <br/>
+  &lt;div class="block large-row-spacer"&gt; <br/>
+   &lt;div class="left-align"&gt; <br/>
+    &lt;fieldset&gt; &lt;legend&gt;Web Table Example&lt;/legend&gt; <br/>
+     &lt;table id="product" name="courses" class="table-display" border="1"&gt; <br/>
+      &lt;tbody&gt; <br/>
+       &lt;tr&gt; <br/>
+        &lt;th&gt;Instructor&lt;/th&gt; <br/>
+        &lt;th&gt;Course&lt;/th&gt; <br/>
+        &lt;th&gt;Price&lt;/th&gt; <br/>
+       &lt;/tr&gt; <br/>
+       &lt;tr&gt; <br/>
+        &lt;td&gt;Rahul Shetty&lt;/td&gt; <br/>
+        &lt;td&gt;Selenium Webdriver with Java Basics + Advanced + Interview Guide&lt;/td&gt; <br/>
+        &lt;td&gt;30&lt;/td&gt; <br/>
+       &lt;/tr&gt; <br/>
+       &lt;tr&gt; <br/>
+        &lt;td&gt;Rahul Shetty&lt;/td&gt; <br/>
+        &lt;td&gt;Learn SQL in Practical + Database Testing from Scratch&lt;/td&gt; <br/>
+        &lt;td&gt;25&lt;/td&gt; <br/>
+       &lt;/tr&gt; <br/>
+       &lt;tr&gt; <br/>
+        &lt;td&gt;Rahul Shetty&lt;/td&gt; <br/>
+        &lt;td&gt;Appium (Selenium) - Mobile Automation Testing from Scratch&lt;/td&gt; <br/>
+        &lt;td&gt;30&lt;/td&gt; <br/>
+       &lt;/tr&gt; <br/>
+       &lt;tr&gt; <br/>
+        &lt;td&gt;Rahul Shetty&lt;/td&gt; <br/>
+        &lt;td&gt;WebSecurity Testing for Beginners-QA knowledge to next level&lt;/td&gt; <br/>
+        &lt;td&gt;20&lt;/td&gt; <br/>
+       &lt;/tr&gt; <br/>
+       &lt;tr&gt; <br/>
+        &lt;td&gt;Rahul Shetty&lt;/td&gt; <br/>
+        &lt;td&gt;Learn JMETER from Scratch - (Performance + Load) Testing Tool&lt;/td&gt; <br/>
+        &lt;td&gt;25&lt;/td&gt; <br/>
+       &lt;/tr&gt; <br/>
+       &lt;tr&gt; <br/>
+        &lt;td&gt;Rahul Shetty&lt;/td&gt; <br/>
+        &lt;td&gt;WebServices / REST API Testing with SoapUI&lt;/td&gt; <br/>
+        &lt;td&gt;35&lt;/td&gt; <br/>
+       &lt;/tr&gt; <br/>
+       &lt;tr&gt; <br/>
+        &lt;td&gt;Rahul Shetty&lt;/td&gt; <br/>
+        &lt;td&gt;QA Expert Course :Software Testing + Bugzilla + SQL + Agile&lt;/td&gt; <br/>
+        &lt;td&gt;25&lt;/td&gt; <br/>
+       &lt;/tr&gt; <br/>
+       &lt;tr&gt; <br/>
+        &lt;td&gt;Rahul Shetty&lt;/td&gt; <br/>
+        &lt;td&gt;Master Selenium Automation in simple Python Language&lt;/td&gt; <br/>
+        &lt;td&gt;25&lt;/td&gt; <br/>
+       &lt;/tr&gt; <br/>
+       &lt;tr&gt; <br/>
+        &lt;td&gt;Rahul Shetty&lt;/td&gt; <br/>
+        &lt;td&gt;Advanced Selenium Framework Pageobject, TestNG, Maven, Jenkins,C&lt;/td&gt; <br/>
+        &lt;td&gt;20&lt;/td&gt; <br/>
+       &lt;/tr&gt; <br/>
+       &lt;tr&gt; <br/>
+        &lt;td&gt;Rahul Shetty&lt;/td&gt; <br/>
+        &lt;td&gt;Write effective QA Resume that will turn to interview call&lt;/td&gt; <br/>
+        &lt;td&gt;0&lt;/td&gt; <br/>
+       &lt;/tr&gt; <br/>
+      &lt;/tbody&gt; <br/>
+     &lt;/table&gt; <br/>
+    &lt;/fieldset&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;div class="right-align"&gt; <br/>
+    &lt;fieldset&gt; &lt;legend&gt;Element Displayed Example&lt;/legend&gt; <br/>
+     &lt;input id="hide-textbox" class="btn-style class2" value="Hide" onclick="hideElement()" type="submit"&gt; <br/>
+     &lt;input id="show-textbox" class="btn-style class2" value="Show" onclick="showElement()" type="submit"&gt; <br/>
+     &lt;br&gt;<br/>
+     &lt;br&gt; <br/>
+     &lt;input id="displayed-text" name="show-hide" class="inputs displayed-class" placeholder="Hide/Show Example" type="text"&gt; <br/>
+    &lt;/fieldset&gt; <br/>
+    &lt;fieldset&gt; &lt;legend&gt;Web Table Fixed header&lt;/legend&gt; <br/>
+     &lt;div class="tableFixHead" style="overflow-y: auto; height: 195px;"&gt; <br/>
+      &lt;table id="product"&gt; <br/>
+       &lt;thead&gt; <br/>
+        &lt;tr&gt; <br/>
+         &lt;th style="position: sticky; top: 0;"&gt;Name&lt;/th&gt; <br/>
+         &lt;th style="position: sticky; top: 0;"&gt;Position&lt;/th&gt; <br/>
+         &lt;th style="position: sticky; top: 0;"&gt;City&lt;/th&gt; <br/>
+         &lt;th style="position: sticky; top: 0;"&gt;Amount&lt;/th&gt; <br/>
+        &lt;/tr&gt; <br/>
+       &lt;/thead&gt; <br/>
+       &lt;tbody&gt; <br/>
+        &lt;tr&gt;<br/>
+         &lt;td&gt;Alex&lt;/td&gt;<br/>
+         &lt;td&gt;Engineer&lt;/td&gt;<br/>
+         &lt;td&gt;Chennai&lt;/td&gt;<br/>
+         &lt;td&gt;28&lt;/td&gt;<br/>
+        &lt;/tr&gt; <br/>
+        &lt;tr&gt;<br/>
+         &lt;td&gt;Ben&lt;/td&gt;<br/>
+         &lt;td&gt;Mechanic&lt;/td&gt;<br/>
+         &lt;td&gt;Bengaluru&lt;/td&gt;<br/>
+         &lt;td&gt;23&lt;/td&gt;<br/>
+        &lt;/tr&gt; <br/>
+        &lt;tr&gt;<br/>
+         &lt;td&gt;Dwayne&lt;/td&gt;<br/>
+         &lt;td&gt;Manager&lt;/td&gt;<br/>
+         &lt;td&gt;Kolkata&lt;/td&gt;<br/>
+         &lt;td&gt;48&lt;/td&gt;<br/>
+        &lt;/tr&gt; <br/>
+        &lt;tr&gt;<br/>
+         &lt;td&gt;Ivory&lt;/td&gt;<br/>
+         &lt;td&gt;Receptionist&lt;/td&gt;<br/>
+         &lt;td&gt;Chennai&lt;/td&gt;<br/>
+         &lt;td&gt;18&lt;/td&gt;<br/>
+        &lt;/tr&gt; <br/>
+        &lt;tr&gt;<br/>
+         &lt;td&gt;Jack&lt;/td&gt;<br/>
+         &lt;td&gt;Engineer&lt;/td&gt;<br/>
+         &lt;td&gt;Pune&lt;/td&gt;<br/>
+         &lt;td&gt;32&lt;/td&gt;<br/>
+        &lt;/tr&gt; <br/>
+        &lt;tr&gt;<br/>
+         &lt;td&gt;Joe&lt;/td&gt;<br/>
+         &lt;td&gt;Postman&lt;/td&gt;<br/>
+         &lt;td&gt;Chennai&lt;/td&gt;<br/>
+         &lt;td&gt;46&lt;/td&gt;<br/>
+        &lt;/tr&gt; <br/>
+        &lt;tr&gt;<br/>
+         &lt;td&gt;Raymond&lt;/td&gt;<br/>
+         &lt;td&gt;Businessman&lt;/td&gt;<br/>
+         &lt;td&gt;Mumbai&lt;/td&gt;<br/>
+         &lt;td&gt;37&lt;/td&gt;<br/>
+        &lt;/tr&gt; <br/>
+        &lt;tr&gt;<br/>
+         &lt;td&gt;Ronaldo&lt;/td&gt;<br/>
+         &lt;td&gt;Sportsman&lt;/td&gt;<br/>
+         &lt;td&gt;Chennai&lt;/td&gt;<br/>
+         &lt;td&gt;31&lt;/td&gt;<br/>
+        &lt;/tr&gt; <br/>
+        &lt;tr&gt;<br/>
+         &lt;td&gt;Smith&lt;/td&gt;<br/>
+         &lt;td&gt;Cricketer&lt;/td&gt;<br/>
+         &lt;td&gt;Delhi&lt;/td&gt;<br/>
+         &lt;td&gt;33&lt;/td&gt;<br/>
+        &lt;/tr&gt; <br/>
+       &lt;/tbody&gt; <br/>
+      &lt;/table&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;br&gt; <br/>
+     &lt;div class="totalAmount"&gt;<br/>
+       Total Amount Collected: 296 <br/>
+     &lt;/div&gt; <br/>
+    &lt;/fieldset&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/div&gt; <br/>
+  &lt;div class="block large-row-spacer"&gt; <br/>
+   &lt;div class="left-align"&gt; <br/>
+    &lt;fieldset style="margin-bottom:60px"&gt; &lt;legend&gt;Mouse Hover Example&lt;/legend&gt; <br/>
+     &lt;div class="mouse-hover"&gt; &lt;button id="mousehover" class="btn btn-primary"&gt;Mouse Hover&lt;/button&gt; <br/>
+      &lt;div class="mouse-hover-content"&gt; &lt;a href="#top"&gt;Top&lt;/a&gt; &lt;a href=""&gt;Reload&lt;/a&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/fieldset&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/div&gt; <br/>
+  &lt;div class="block large-row-spacer"&gt; <br/>
+   &lt;fieldset&gt; &lt;legend&gt;iFrame Example&lt;/legend&gt; &lt;iframe id="courses-iframe" src="https://www.rahulshettyacademy.com/" name="iframe-name" style="width: 100%; height: 600px" scrolling="yes" marginwidth="0" marginheight="0" vspace="0" hspace="0" frameborder="0"&gt; &lt;/iframe&gt; <br/>
+   &lt;/fieldset&gt; <br/>
+  &lt;/div&gt; <br/>
+  &lt;div id="gf-BIG" class=" footer_top_agile_w3ls gffoot footer_style"&gt; <br/>
+   &lt;table class="gf-t"&gt; <br/>
+    &lt;tbody&gt; <br/>
+     &lt;tr&gt; <br/>
+      &lt;td&gt; <br/>
+       &lt;ul&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;h3&gt;&lt;a href="#"&gt;Discount Coupons&lt;/a&gt;&lt;/h3&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="http://www.restapitutorial.com/"&gt;REST API&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="https://www.soapui.org/"&gt;SoapUI&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="https://www.udemy.com/course/mobile-automation-using-appiumselenium-3/?referralCode=C46BF551F5B9EAF08E10"&gt;Appium&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="https://jmeter.apache.org/"&gt;JMeter&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;/ul&gt; &lt;/td&gt; <br/>
+      &lt;td&gt; <br/>
+       &lt;ul&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;h3&gt;&lt;a href="#"&gt;Latest News&lt;/a&gt;&lt;/h3&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="https://rahulshettyacademy.com/brokenlink"&gt;Broken Link&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="#"&gt;Dummy Content for Testing.&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="#"&gt;Dummy Content for Testing.&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="#"&gt;Dummy Content for Testing.&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;/ul&gt; &lt;/td&gt; <br/>
+      &lt;td&gt; <br/>
+       &lt;ul&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;h3&gt;&lt;a href="#"&gt;Contact info&lt;/a&gt;&lt;/h3&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="#"&gt;Dummy Content for Testing.&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="#"&gt;Dummy Content for Testing.&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="#"&gt;Dummy Content for Testing.&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="#"&gt;Dummy Content for Testing.&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;/ul&gt; &lt;/td&gt; <br/>
+      &lt;td&gt; <br/>
+       &lt;ul&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;h3&gt;&lt;a href="#"&gt;Social Media&lt;/a&gt;&lt;/h3&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="#"&gt;Facebook&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="#"&gt;Twitter&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="#"&gt;Google+&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li class="gf-li"&gt;&lt;a href="#"&gt;Youtube&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;/ul&gt; &lt;/td&gt; <br/>
+     &lt;/tr&gt; <br/>
+    &lt;/tbody&gt; <br/>
+   &lt;/table&gt; <br/>
+  &lt;/div&gt; &lt;!-- ==== CREDITS START == --&gt; <br/>
+  &lt;div class="col-sm-8 right-align"&gt;<br/>
+    © 2019 Powered by&lt;strong&gt;&lt;a href="http://www.medianhconsulting.com" target="_blank"&gt; Medianh Consulting&lt;/a&gt;&lt;/strong&gt; <br/>
+  &lt;/div&gt; &lt;!-- ==== CREDITS END == --&gt; <br/>
+  &lt;ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"&gt;&lt;/ul&gt;<br/>
+  &lt;div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;!-- &lt;footer class="jumbotron text-center header_style"&gt;<br/>
+    &lt;center&gt;Copyright © 2019 QAClick Academy. All Rights Reserved. &lt;/center&gt;<br/>
+&lt;/footer&gt; --&gt;<br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>
